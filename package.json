@@ -6,8 +6,7 @@
     "start": "tsx ./src/index.ts",
     "dev": "tsx watch ./src/index.ts",
     "fmt": "prettier --write .",
-    "typecheck": "tsc --noEmit",
-    "build": "tsc"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@prisma/client": "^6.4.1",
