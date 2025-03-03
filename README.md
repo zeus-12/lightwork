@@ -1,5 +1,39 @@
 ## Lightwork Backend API
 
+### Project Description
+
+A backend API service for managing doctor appointments and scheduling. Built with Node.js, Express, and PostgreSQL (via Prisma ORM).
+
+It provides:
+
+- Doctor profile management
+- Flexible appointment slot creation with:
+  - One-time slots
+  - Weekly recurring slots
+  - Monthly recurring slots
+  - Configurable slot durations (15 or 30 minutes)
+- Appointment booking system
+- Availability checking
+- Date range based booking queries
+
+Key Features:
+
+- RESTful API design
+- Docker containerization for easy deployment
+- Automated database migrations
+- Efficient slot generation based on recurrence rules
+- Conflict-free booking with database constraints
+- UTC timestamp handling for timezone safety
+
+Tech Stack:
+
+- Node.js/Express
+- PostgreSQL
+- Prisma ORM
+- Docker & Docker Compose
+- TypeScript
+- Zod for input validation
+
 ### Routes
 
 - POST `/api/doctor`
