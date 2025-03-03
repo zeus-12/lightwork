@@ -15,6 +15,7 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "node-fetch": "^3.3.2",
+    "tsx": "^4.19.3",
     "zod": "^3.24.2",
     "zod-validation-error": "^3.4.0"
   },
@@ -25,7 +26,6 @@
     "@types/node-fetch": "^2.6.12",
     "prettier": "^3.5.2",
     "prettier-plugin-organize-imports": "^4.1.0",
-    "tsx": "^4.19.3",
     "typescript": "^5.8.2"
   }
 }
