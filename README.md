@@ -258,7 +258,7 @@ git clone https://github.com/zeus-12/lightwork.git
 
 ```bash
 cd lightwork
-npm install
+bun install
 ```
 
 #### Run docker-compose
