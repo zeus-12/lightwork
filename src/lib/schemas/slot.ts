@@ -1,3 +1,4 @@
+import { RepeatType } from "@prisma/client";
 import { z } from "zod";
 
 const dateSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, {
@@ -10,12 +11,12 @@ const slotDurationSchema = z
   })
   .transform((val) => parseInt(val));
 
-export const slotIdSchema = z.object({
-  slotId: z.string(),
+export const slotBookingSchema = z.object({
+  slotId: z.string().uuid(),
   reason: z.string(),
 });
 
-export const slotDatesSchema = z.object({
+export const slotDatesAndDoctorIdSchema = z.object({
   startDate: dateSchema,
   endDate: dateSchema,
   doctorId: z.string(),
@@ -25,4 +26,4 @@ export const availableSlotsQuerySchema = z.object({
   doctorId: z.string().uuid(),
   date: dateSchema,
   slotDuration: slotDurationSchema,
-});
+  });
