@@ -29,7 +29,6 @@ export const generateSlotsForDate = (
   const [endHour, endMinute] = dailyEndTime.split(":").map(Number);
 
   const slots = [];
-
   const endDateTime = new Date(
     Date.UTC(
       new Date(endDate).getFullYear(),
@@ -50,7 +49,6 @@ export const generateSlotsForDate = (
         currentDate.getUTCDate(),
         startHour,
         startMinute,
-        0,
       ),
     );
 
@@ -61,20 +59,10 @@ export const generateSlotsForDate = (
         currentDate.getUTCDate(),
         endHour,
         endMinute,
-        0,
       ),
     );
 
-    let currentSlotStart = new Date(
-      Date.UTC(
-        slotStartTime.getUTCFullYear(),
-        slotStartTime.getUTCMonth(),
-        slotStartTime.getUTCDate(),
-        slotStartTime.getUTCHours(),
-        slotStartTime.getUTCMinutes(),
-        0,
-      ),
-    );
+    let currentSlotStart = new Date(slotStartTime);
 
     while (
       currentSlotStart.getTime() + slotDuration * 60000 <=
@@ -88,9 +76,9 @@ export const generateSlotsForDate = (
           currentSlotStart.getUTCDate(),
           currentSlotStart.getUTCHours(),
           currentSlotStart.getUTCMinutes() + slotDuration,
-          0,
         ),
       );
+
       slots.push({
         doctorId,
         recurrenceId,
