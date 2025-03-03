@@ -26,4 +26,19 @@ export const availableSlotsQuerySchema = z.object({
   doctorId: z.string().uuid(),
   date: dateSchema,
   slotDuration: slotDurationSchema,
+});
+
+export const slotSchema = z
+  .object({
+    startTime: z.string().datetime(),
+    endTime: z.string().datetime(),
+    slotDuration: z.number(),
+    repeatType: z.nativeEnum(RepeatType),
+    daysOfWeek: z.number(),
+    endDate: z.string(),
+    doctorId: z.string().uuid(),
+  })
+  .refine((data) => data.startTime < data.endTime, {
+    message: "Invalid recurrence range",
+    path: ["startTime", "endTime"],
   });
