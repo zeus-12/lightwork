@@ -1,0 +1,73 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Doctor {
+  id        String   @id @default(uuid())
+  username  String   @unique
+  firstName String
+  lastName  String
+  email     String   @unique
+  recurrenceRules RecurrenceRule[] 
+  slots           Slot[]     
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt()    
+}
+
+
+
+model Slot {
+  id          String    @id @default(uuid())
+  doctorId    String
+  doctor      Doctor    @relation(fields: [doctorId], references: [id], onDelete: Cascade)
+  startTime   DateTime
+  endTime     DateTime
+  recurrence  RecurrenceRule? @relation(fields: [recurrenceId], references: [id])
+  recurrenceId String?
+  booking     Booking?
+  slotDuration Int // 15 or 30 mins
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt()
+
+  @@unique([doctorId, startTime])
+}
+
+
+
+model RecurrenceRule {
+  id         String    @id @default(uuid())
+  doctorId   String
+  doctor     Doctor    @relation(fields: [doctorId], references: [id], onDelete: Cascade)
+  repeatType RepeatType
+  daysOfWeek Int? // Bitmask for weekly recurrence
+  startDate DateTime
+  endDate    DateTime
+  slots      Slot[]
+  dailyStartTime String 
+  dailyEndTime   String
+  slotDuration   Int   
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt()
+}
+
+
+enum RepeatType {
+  NONE // One-time slots
+  WEEKLY
+  MONTHLY
+  // YEARLY is prob overkill
+}
+
+model Booking {
+  id        String   @id @default(uuid())
+  slotId    String   @unique
+  slot      Slot     @relation(fields: [slotId], references: [id], onDelete: Cascade)
+  reason    String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt()
+}
