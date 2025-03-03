@@ -112,75 +112,75 @@
   --header 'Content-Type: application/json'
   ```
 
-      Response body:
+  Response body:
 
-      ```json
+  ```json
+  {
+    "status": "success",
+    "data": [
       {
-        "status": "success",
-        "data": [
-            {
-                "id": "91ccb30d-4e0a-43e0-88d4-1404a3c47377",
-                "doctorId": "900f5091-af5a-4187-9ef7-e440a5c9b55b",
-                "startTime": "2024-06-12T10:00:00.000Z",
-                "endTime": "2024-06-12T10:15:00.000Z",
-                "recurrenceId": "8d0e8b2b-874f-4ed8-87fc-b2278de75f5e",
-                "slotDuration": 15,
-                "createdAt": "2025-03-03T18:27:40.517Z",
-                "updatedAt": "2025-03-03T18:27:40.517Z"
-            },
-            {
-                "id": "f0b70fc8-68ae-4451-8d0d-ac6c6bc214f7",
-                "doctorId": "900f5091-af5a-4187-9ef7-e440a5c9b55b",
-                "startTime": "2024-06-12T10:15:00.000Z",
-                "endTime": "2024-06-12T10:30:00.000Z",
-                "recurrenceId": "8d0e8b2b-874f-4ed8-87fc-b2278de75f5e",
-                "slotDuration": 15,
-                "createdAt": "2025-03-03T18:27:40.517Z",
-                "updatedAt": "2025-03-03T18:27:40.517Z"
-            },
-            {
-                "id": "17e3a6a6-cf65-46c9-aa40-834d778e18ca",
-                "doctorId": "900f5091-af5a-4187-9ef7-e440a5c9b55b",
-                "startTime": "2024-06-12T10:30:00.000Z",
-                "endTime": "2024-06-12T10:45:00.000Z",
-                "recurrenceId": "8d0e8b2b-874f-4ed8-87fc-b2278de75f5e",
-                "slotDuration": 15,
-                "createdAt": "2025-03-03T18:27:40.517Z",
-                "updatedAt": "2025-03-03T18:27:40.517Z"
-            },
-            {
-                "id": "015f32cf-213e-4f06-8a76-215f850184f2",
-                "doctorId": "900f5091-af5a-4187-9ef7-e440a5c9b55b",
-                "startTime": "2024-06-12T10:45:00.000Z",
-                "endTime": "2024-06-12T11:00:00.000Z",
-                "recurrenceId": "8d0e8b2b-874f-4ed8-87fc-b2278de75f5e",
-                "slotDuration": 15,
-                "createdAt": "2025-03-03T18:27:40.517Z",
-                "updatedAt": "2025-03-03T18:27:40.517Z"
-            },
-                {
-                "id": "c37fab32-d8be-41a7-91ef-39afd7d754f5",
-                "doctorId": "900f5091-af5a-4187-9ef7-e440a5c9b55b",
-                "startTime": "2024-06-12T11:00:00.000Z",
-                "endTime": "2024-06-12T11:15:00.000Z",
-                "recurrenceId": "8d0e8b2b-874f-4ed8-87fc-b2278de75f5e",
-                "slotDuration": 15,
-                "createdAt": "2025-03-03T18:27:40.517Z",
-                "updatedAt": "2025-03-03T18:27:40.517Z"
-            },
-            {
-                "id": "31c1105a-dfa3-4552-a17a-fef402e2b1b3",
-                "doctorId": "900f5091-af5a-4187-9ef7-e440a5c9b55b",
-                "startTime": "2024-06-12T11:15:00.000Z",
-                "endTime": "2024-06-12T11:30:00.000Z",
-                "recurrenceId": "8d0e8b2b-874f-4ed8-87fc-b2278de75f5e",
-                "slotDuration": 15,
-                "createdAt": "2025-03-03T18:27:40.517Z",
-                "updatedAt": "2025-03-03T18:27:40.517Z"
-            }
-        ]
-
-      }```
+        "id": "91ccb30d-4e0a-43e0-88d4-1404a3c47377",
+        "doctorId": "900f5091-af5a-4187-9ef7-e440a5c9b55b",
+        "startTime": "2024-06-12T10:00:00.000Z",
+        "endTime": "2024-06-12T10:15:00.000Z",
+        "recurrenceId": "8d0e8b2b-874f-4ed8-87fc-b2278de75f5e",
+        "slotDuration": 15,
+        "createdAt": "2025-03-03T18:27:40.517Z",
+        "updatedAt": "2025-03-03T18:27:40.517Z"
+      },
+      {
+        "id": "f0b70fc8-68ae-4451-8d0d-ac6c6bc214f7",
+        "doctorId": "900f5091-af5a-4187-9ef7-e440a5c9b55b",
+        "startTime": "2024-06-12T10:15:00.000Z",
+        "endTime": "2024-06-12T10:30:00.000Z",
+        "recurrenceId": "8d0e8b2b-874f-4ed8-87fc-b2278de75f5e",
+        "slotDuration": 15,
+        "createdAt": "2025-03-03T18:27:40.517Z",
+        "updatedAt": "2025-03-03T18:27:40.517Z"
+      },
+      {
+        "id": "17e3a6a6-cf65-46c9-aa40-834d778e18ca",
+        "doctorId": "900f5091-af5a-4187-9ef7-e440a5c9b55b",
+        "startTime": "2024-06-12T10:30:00.000Z",
+        "endTime": "2024-06-12T10:45:00.000Z",
+        "recurrenceId": "8d0e8b2b-874f-4ed8-87fc-b2278de75f5e",
+        "slotDuration": 15,
+        "createdAt": "2025-03-03T18:27:40.517Z",
+        "updatedAt": "2025-03-03T18:27:40.517Z"
+      },
+      {
+        "id": "015f32cf-213e-4f06-8a76-215f850184f2",
+        "doctorId": "900f5091-af5a-4187-9ef7-e440a5c9b55b",
+        "startTime": "2024-06-12T10:45:00.000Z",
+        "endTime": "2024-06-12T11:00:00.000Z",
+        "recurrenceId": "8d0e8b2b-874f-4ed8-87fc-b2278de75f5e",
+        "slotDuration": 15,
+        "createdAt": "2025-03-03T18:27:40.517Z",
+        "updatedAt": "2025-03-03T18:27:40.517Z"
+      },
+      {
+        "id": "c37fab32-d8be-41a7-91ef-39afd7d754f5",
+        "doctorId": "900f5091-af5a-4187-9ef7-e440a5c9b55b",
+        "startTime": "2024-06-12T11:00:00.000Z",
+        "endTime": "2024-06-12T11:15:00.000Z",
+        "recurrenceId": "8d0e8b2b-874f-4ed8-87fc-b2278de75f5e",
+        "slotDuration": 15,
+        "createdAt": "2025-03-03T18:27:40.517Z",
+        "updatedAt": "2025-03-03T18:27:40.517Z"
+      },
+      {
+        "id": "31c1105a-dfa3-4552-a17a-fef402e2b1b3",
+        "doctorId": "900f5091-af5a-4187-9ef7-e440a5c9b55b",
+        "startTime": "2024-06-12T11:15:00.000Z",
+        "endTime": "2024-06-12T11:30:00.000Z",
+        "recurrenceId": "8d0e8b2b-874f-4ed8-87fc-b2278de75f5e",
+        "slotDuration": 15,
+        "createdAt": "2025-03-03T18:27:40.517Z",
+        "updatedAt": "2025-03-03T18:27:40.517Z"
+      }
+    ]
+  }
+  ```
 
 - POST `/api/slot/:slotId/book`
   To book a slot.
